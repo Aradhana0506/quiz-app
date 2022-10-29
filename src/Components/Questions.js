@@ -1,12 +1,20 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import { Button, Card } from "antd";
 import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
+import { questions } from "./redux/action";
+import { useSelector, useDispatch } from "react-redux";
 const Questions = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(questions());
+  }, [dispatch]);
   const navigate = useNavigate();
   const handelQuit = () => {
     navigate("/");
   };
+  const questionList=useSelector((state)=>state.reducer.dataList)
+  console.log(questionList.results);
   return (
     <div>
       <Card className={styles.question__main__card}>
