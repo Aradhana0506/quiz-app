@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card } from "antd";
 import { useNavigate } from "react-router-dom";
+import { CheckCircleOutlined } from '@ant-design/icons';
 import styles from "./Home.module.css";
 const Result = () => {
   const navigate = useNavigate();
@@ -12,9 +13,11 @@ const Result = () => {
   };
   return (
     <div>
-      <h1>Result</h1>
+      <br/>
+      <CheckCircleOutlined className={styles.result__icon} />
+      <h1 className={styles.result__h1__result}>Result</h1>
       <Card className={styles.result__card__main}>
-        <h1>Congratulations!</h1>
+        <h1 className={styles.result__h1__review}>Congratulations!</h1>
         <h1 className={styles.result__h1_score}>Your Score :%</h1>
         <p>Total number of questions</p>
         <p>Number of Attempted questions </p>

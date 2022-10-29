@@ -18,7 +18,7 @@
 
 .question__main__card {
     width: 900px;
-    height: 400px;
+    height: 400px ;
     margin-top: 50px !important;
     margin-left: 250px !important;
 }
@@ -46,22 +46,39 @@
               margin-left: 20px;
 }
 .question__btn__quit{
-    background-color: rgba(234,67,85,255);
-    border-color: rgba(234,67,85,255);
+    background-color: rgba(234,67,85,255) !important;
+    border-color: rgba(234,67,85,255) !important;
     margin-left: 20px;
 }
 .result__card__main{
-    width:600px;
-    height:300px ;
-    margin-left:400px !important;
+    width:780px;
+    height:330px ;
+    margin-left:300px !important;
+}
+.result__icon{
+    font-size: 80px;
+    margin-left: 640px;
+    color:rgba(87,184,70,255) !important;
+}
+.result__h1__result{
+    margin-left: 630px;
+    font-size: 40px;
+    font-weight: 500;
+    color:rgba(87,184,70,255)
+}
+.result__h1__review{
+    margin-left: 200px;
+    font-weight: 350 !important;
 }
 .result__h1_score{
     color:rgba(106,191,244,255);
+    margin-left: 200px;
+    font-size: 40px;
 }
 .result__btn_playagain{
     border-color: rgba(106,191,244,255) !important;
     color:rgba(106,191,244,255) !important;
-    margin-left:600px ;
+    margin-left:560px ;
 }
 .result__btn_back{
     border-color: rgba(87,184,70,255) !important;

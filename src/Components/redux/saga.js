@@ -6,7 +6,6 @@ export  function* tryquestionList() {
     const URL = " https://opentdb.com/api.php?amount=20";
     const response = yield call(fetch, URL);
     const data = yield call([response, "json"]);
-  
     yield put({ type: GET_QUESTION_LIST_SUCCESS, data });
   } catch (e) {
     yield put({ type: GET_QUESTION_LIST_FAILED });

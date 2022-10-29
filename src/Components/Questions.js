@@ -14,7 +14,7 @@ const Questions = () => {
     navigate("/");
   };
   const questionList=useSelector((state)=>state.reducer.dataList)
-  console.log(questionList.results);
+  console.log("apidata",questionList.results);
   return (
     <div>
       <Card className={styles.question__main__card}>

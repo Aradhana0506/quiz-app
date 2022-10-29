@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.min.css';
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import getStore from "./Components/saga/getStore";
+import getStore from "./Components/store/getStore";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const { store } = getStore();
