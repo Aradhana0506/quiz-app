@@ -11,7 +11,6 @@ export function questions() {
   };
 }
 export const selectedAnswer=(payload)=>{
-  console.log(payload,"payload")
     return {
         type:SELECTED_ANSWER,
         payload

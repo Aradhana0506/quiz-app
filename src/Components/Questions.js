@@ -95,8 +95,6 @@ const Questions = () => {
             let bValue = questionList.results.find(
               (e) => e.question === questionList.results[questionIndex].question
             );
-
-            // console.log("SELECTED OR NOT", bValue , "DATA");
             return (
               <div className={styles.question__btn__div} key={id}>
                 <Button

@@ -10,7 +10,6 @@ const Result = () => {
   const { score, attemptQuestion, dataList } = useSelector(
     (state) => state.reducer
   );
-  // console.log(dataList.results.filter(e=>e.selectedAnswer).length, score);
   const navigate = useNavigate();
   const handleHome = () => {
     navigate("/");
@@ -19,10 +18,6 @@ const Result = () => {
     dispatch(restartQuiz());
     navigate("/questions");
   };
-  // console.log(
-  //   dataList.results.filter((e) => e.selectedAnswer === e.correctAnswer),
-  //   "SL"
-  // );
   let attemptQuestionData = dataList.results.map(
     (e) => e.selectedAnswer !== e.correctAnswer
   ).length;
