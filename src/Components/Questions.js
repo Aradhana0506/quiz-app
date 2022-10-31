@@ -10,7 +10,7 @@ import {
   selectedAnswer,
 } from "./redux/action";
 import { useSelector, useDispatch } from "react-redux";
-import Qdata from "../enum";
+// import Qdata from "../enum";
 import { convertHTMLEntity } from "../const";
 
 const getRandomInt = (max) => {
@@ -70,9 +70,9 @@ const Questions = () => {
     dispatch(restartQuiz());
     navigate("/");
   };
-  const gotoResult=()=>{
-    navigate("/result")
-  }
+  const gotoResult = () => {
+    navigate("/result");
+  };
   if (isLoading) {
     return (
       <Card className={styles.question__main__card}>
@@ -84,13 +84,17 @@ const Questions = () => {
     questionList.results && (
       <Card className={styles.question__main__card}>
         <center>
-          <h1>Question {questionIndex + 1}</h1>
+          <h1>Question</h1>
         </center>
         <h2 mt={5}>
-          {convertHTMLEntity(questionList.results[questionIndex].question)}
+          <span style={{ fontSize: "15px" }}>{questionIndex + 1} of 20 </span>
+          <span style={{ fontSize: "15px", marginLeft: "60px" }}>
+            {convertHTMLEntity(questionList.results[questionIndex].question)}
+          </span>
         </h2>
         <div
-          style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+          style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
+        >
           {options.map((data, id) => {
             let bValue = questionList.results.find(
               (e) => e.question === questionList.results[questionIndex].question
@@ -105,7 +109,8 @@ const Questions = () => {
                   }
                   onClick={handleClickAnswer}
                   className={styles.question__btn__option}
-                  style={{ padding: "5px", margin: "10px" }}>
+                  style={{ padding: "5px", margin: "10px" }}
+                >
                   {convertHTMLEntity(data)}
                 </Button>
                 <br />
@@ -120,14 +125,16 @@ const Questions = () => {
           <Button
             type="primary"
             onClick={handlePrevQuestion}
-            className={styles.question__btn__prev}>
+            className={styles.question__btn__prev}
+          >
             Previous
           </Button>
           {questionIndex + 1 < questionList.results.length ? (
             <Button
               type="primary"
               onClick={handleNextQuestion}
-              className={styles.question__btn__next}>
+              className={styles.question__btn__next}
+            >
               Next
             </Button>
           ) : (
@@ -138,7 +145,8 @@ const Questions = () => {
           <Button
             type="primary"
             className={styles.question__btn__quit}
-            onClick={handleQuit}>
+            onClick={handleQuit}
+          >
             Quit
           </Button>
         </div>

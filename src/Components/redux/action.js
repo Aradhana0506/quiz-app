@@ -10,12 +10,12 @@ export function questions() {
     type: GET_QUESTION_LIST,
   };
 }
-export const selectedAnswer=(payload)=>{
-    return {
-        type:SELECTED_ANSWER,
-        payload
-    }
-}
+export const selectedAnswer = (payload) => {
+  return {
+    type: SELECTED_ANSWER,
+    payload,
+  };
+};
 export const handleScoreChange = (payload) => ({
   type: CHANGE_SCORE,
   payload,

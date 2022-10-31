@@ -3,14 +3,11 @@ import { Button } from "antd";
 import styles from "./Home.module.css";
 import { useNavigate } from "react-router-dom";
 
-
 const Home = () => {
-  
   const navigate = useNavigate();
   const handelPlay = () => {
     navigate("/questions");
   };
-  
 
   return (
     <div>
